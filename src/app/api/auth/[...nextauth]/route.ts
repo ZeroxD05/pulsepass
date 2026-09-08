@@ -1,10 +1,10 @@
 import NextAuth, { NextAuthOptions } from "next-auth"
 import GoogleProvider from "next-auth/providers/google"
 import DiscordProvider from "next-auth/providers/discord"
-import { PrismaAdapter } from "@next-auth/prisma-adapter"
-import { PrismaClient } from "@prisma/client"
+// import { PrismaAdapter } from "@next-auth/prisma-adapter"
+// import { PrismaClient } from "@prisma/client"
 
-const prisma = new PrismaClient()
+// const prisma = new PrismaClient()
 
 export const authOptions: NextAuthOptions = {
   // adapter: PrismaAdapter(prisma) as any, // Disabled for Vercel SQLite compatibility
@@ -23,6 +23,7 @@ export const authOptions: NextAuthOptions = {
   pages: {
     signIn: '/login',
   },
+  secret: process.env.NEXTAUTH_SECRET || "fallback_secret_for_vercel_preview_12345",
   session: {
     strategy: "jwt" // Using JWT strategy since we are using Database adapter but want fast session checks
   }
