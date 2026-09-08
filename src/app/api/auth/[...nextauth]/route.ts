@@ -6,7 +6,7 @@ import { PrismaClient } from "@prisma/client"
 
 const prisma = new PrismaClient()
 
-const handler = NextAuth({
+export const authOptions = {
   adapter: PrismaAdapter(prisma),
   providers: [
     GoogleProvider({
@@ -26,6 +26,8 @@ const handler = NextAuth({
   session: {
     strategy: "jwt" // Using JWT strategy since we are using Database adapter but want fast session checks
   }
-})
+}
+
+const handler = NextAuth(authOptions)
 
 export { handler as GET, handler as POST }

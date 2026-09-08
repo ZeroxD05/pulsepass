@@ -13,12 +13,14 @@ export const metadata: Metadata = {
   description: "Stop wasting time with text files. PulsePass is the modern Battle Pass for Minecraft Servers with a UI, Bedrock support, and built-in monetization.",
 };
 
+import { authOptions } from "./api/auth/[...nextauth]/route";
+
 export default async function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  const session = await getServerSession()
+  const session = await getServerSession(authOptions)
 
   return (
     <html lang="en">
