@@ -7,7 +7,7 @@ import { PrismaClient } from "@prisma/client"
 const prisma = new PrismaClient()
 
 export const authOptions: NextAuthOptions = {
-  adapter: PrismaAdapter(prisma) as any, // sometimes NextAuth v4 adapters need as any for TS strictness
+  // adapter: PrismaAdapter(prisma) as any, // Disabled for Vercel SQLite compatibility
   providers: [
     GoogleProvider({
       clientId: process.env.GOOGLE_CLIENT_ID || "",
