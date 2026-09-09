@@ -69,6 +69,67 @@ body {
   box-shadow: inset 0 0 50px rgba(0,0,0,0.8), 0 0 20px rgba(0,0,0,0.5);
 }
 
+/* Scroll Background */
+.mc-scroll {
+  background-color: #e8d4a2;
+  background-image: repeating-linear-gradient(
+    to bottom,
+    transparent 0px,
+    transparent 16px,
+    rgba(0,0,0,0.04) 16px,
+    rgba(0,0,0,0.04) 20px
+  );
+  border: 4px solid #3e2714;
+  border-radius: 4px;
+  box-shadow: 
+    inset 16px 0 20px rgba(0,0,0,0.1),
+    inset -16px 0 20px rgba(0,0,0,0.1),
+    10px 10px 30px rgba(0,0,0,0.8);
+  position: relative;
+  color: #3e2714;
+}
+
+.mc-scroll::before {
+  content: "";
+  position: absolute;
+  top: -12px; left: -8px; right: -8px; height: 16px;
+  background-color: #c9b177;
+  border: 4px solid #3e2714;
+  border-radius: 8px 8px 0 0;
+  box-shadow: inset 0 6px 0 rgba(255,255,255,0.4), inset 0 -4px 0 rgba(0,0,0,0.2);
+}
+
+.mc-scroll::after {
+  content: "";
+  position: absolute;
+  bottom: -12px; left: -8px; right: -8px; height: 16px;
+  background-color: #c9b177;
+  border: 4px solid #3e2714;
+  border-radius: 0 0 8px 8px;
+  box-shadow: inset 0 6px 0 rgba(255,255,255,0.4), inset 0 -4px 0 rgba(0,0,0,0.2);
+}
+
+/* 3D Pillar CSS Element */
+.mc-3d-pillar {
+  background-color: #7b7b7b;
+  background-image: 
+    repeating-linear-gradient(to bottom, transparent 0px, transparent 36px, #5c5c5c 36px, #5c5c5c 40px),
+    repeating-linear-gradient(to right, transparent 0px, transparent 36px, #5c5c5c 36px, #5c5c5c 40px);
+  border-left: 20px solid #9b9b9b;
+  border-right: 20px solid #4a4a4a;
+  border-top: 20px solid #cccccc;
+  box-shadow: 20px 20px 50px rgba(0,0,0,0.9), inset 0 0 40px rgba(0,0,0,0.4);
+  position: relative;
+}
+.mc-3d-pillar::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  box-shadow: inset 10px 0 20px rgba(255,255,255,0.1), inset -10px 0 20px rgba(0,0,0,0.3);
+  pointer-events: none;
+}
+
+
 /* Exact Textures */
 .bg-mc-wood {
   background-color: #61442c;
@@ -76,8 +137,8 @@ body {
     repeating-linear-gradient(to right, 
       rgba(255,255,255,0.15) 0px, 
       rgba(255,255,255,0) 4px, 
-      rgba(0,0,0,0) 60px, 
-      rgba(0,0,0,0.5) 64px
+      rgba(0,0,0,0) 28px, 
+      rgba(0,0,0,0.5) 32px
     ),
     repeating-linear-gradient(to bottom, 
       #61442c 0px, 

@@ -5,22 +5,26 @@ export default function Home() {
   return (
     <div className="flex flex-col min-h-screen bg-[#1a1a1a] text-white overflow-x-hidden">
       
-      {/* Hero Section with True Full 3D Frame Background */}
-      <section className="relative w-full min-h-[90vh] flex flex-col items-center pt-32 pb-16">
-        {/* Background Image (Contains 3D Wood Top, Stone Sides, Grass Bottom) */}
+      {/* Hero Section */}
+      <section className="relative w-full min-h-[90vh] flex flex-col items-center pt-24 pb-16 overflow-hidden">
+        
+        {/* Background Image */}
         <div 
           className="absolute inset-0 z-0 bg-cover bg-center bg-no-repeat"
           style={{ backgroundImage: "url('/images/bg_full_frame.jpg')" }}
         ></div>
 
-        {/* Central Glass Panel */}
-        <div className="relative z-20 w-[60%] flex flex-col items-center mt-8">
-          <div className="mc-glass-panel py-12 px-10 text-center w-full flex flex-col items-center gap-6">
-            <h1 className="text-5xl md:text-7xl mc-title-shadow leading-tight uppercase tracking-wide">
-              <span className="text-white">UNLEASH YOUR </span> <br /> 
-              <span className="text-white">SERVER'S POTENTIAL</span>
+        {/* Real HTML/CSS 3D Pillars on Left and Right */}
+        <div className="absolute top-0 bottom-0 left-0 w-24 md:w-32 lg:w-40 mc-3d-pillar z-10 hidden sm:block"></div>
+        <div className="absolute top-0 bottom-0 right-0 w-24 md:w-32 lg:w-40 mc-3d-pillar z-10 hidden sm:block"></div>
+
+        {/* Central Scroll Panel */}
+        <div className="relative z-20 w-[85%] md:w-[60%] flex flex-col items-center mt-12">
+          <div className="mc-scroll py-16 px-10 text-center w-full flex flex-col items-center gap-6">
+            <h1 className="text-5xl md:text-7xl leading-tight uppercase tracking-wide font-black" style={{ color: '#2b1a0d', textShadow: '2px 2px 0px rgba(255,255,255,0.4)' }}>
+              UNLEASH YOUR <br /> SERVER'S POTENTIAL
             </h1>
-            <p className="text-2xl text-white mc-text-shadow">
+            <p className="text-2xl font-bold" style={{ color: '#4a3018' }}>
               Battlepasses, Custom Systems, and 3D Assets <br /> for Modern Minecraft Communities
             </p>
             <Link href="#products" className="mc-btn-blue text-3xl mt-8 px-12 py-5 group flex items-center gap-4">

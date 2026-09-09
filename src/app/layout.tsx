@@ -25,10 +25,10 @@ export default async function RootLayout({
   return (
     <html lang="en">
       <body className={`${vt323.className} text-xl bg-[#5d5d5d] text-white antialiased min-h-screen flex flex-col`} style={{ imageRendering: "pixelated" }}>
-        <nav className="absolute top-0 left-0 w-full bg-transparent py-4 px-8 flex items-center justify-between z-50">
+        <nav className="bg-mc-wood py-3 px-8 flex items-center justify-between sticky top-0 z-50">
           
           {/* Left: Logo */}
-          <div className="flex-1 flex justify-start items-center">
+          <div className="flex justify-start items-center">
             <Link href="/" className="flex items-center gap-3">
               {/* 3D Gold/Blue Block Logo */}
               <div className="relative w-10 h-10">
@@ -41,19 +41,16 @@ export default async function RootLayout({
             </Link>
           </div>
           
-          {/* Center: Links */}
-          <div className="hidden md:flex flex-2 justify-center items-center gap-10">
+          {/* Center: Links & Buttons */}
+          <div className="absolute left-1/2 transform -translate-x-1/2 hidden md:flex justify-center items-center gap-10">
             <Link href="/#products" className="text-2xl text-white hover:text-gray-300 transition-colors mc-text-shadow">PRODUCTS</Link>
             <Link href="/#solutions" className="text-2xl text-white hover:text-gray-300 transition-colors mc-text-shadow">SOLUTIONS</Link>
             <Link href="/#pricing" className="text-2xl text-white hover:text-gray-300 transition-colors mc-text-shadow">PLANS</Link>
             <Link href="/#support" className="text-2xl text-white hover:text-gray-300 transition-colors mc-text-shadow">SUPPORT</Link>
-          </div>
-
-          {/* Right: Auth / Community */}
-          <div className="flex-1 flex justify-end gap-4 items-center">
+            
             {session ? (
               <>
-                <Link href="/dashboard" className="mc-btn-blue text-xl mr-4">
+                <Link href="/dashboard" className="mc-btn-blue text-xl">
                   DASHBOARD
                 </Link>
                 <div className="cursor-pointer mc-btn-blue" style={{backgroundColor: '#e60000', borderBottomColor: '#800000', borderRightColor: '#800000', borderTopColor: '#ff5a5a', borderLeftColor: '#ff5a5a'}}>
@@ -66,6 +63,9 @@ export default async function RootLayout({
               </Link>
             )}
           </div>
+
+          {/* Right: Empty for balance */}
+          <div className="w-24"></div>
         </nav>
         {children}
         <Chatbot />
