@@ -25,36 +25,40 @@ export default async function RootLayout({
   return (
     <html lang="en">
       <body className={`${vt323.className} text-xl bg-[#5d5d5d] text-white antialiased min-h-screen flex flex-col`} style={{ imageRendering: "pixelated" }}>
-        <nav className="bg-gray-900 border-b border-gray-800 py-4 px-8 flex items-center justify-between sticky top-0 z-50">
+        <nav className="bg-[#1a1a1a] border-b-4 border-[#333333] py-4 px-8 flex items-center justify-between sticky top-0 z-50 shadow-xl">
           
           {/* Left: Logo */}
-          <div className="flex-1 flex justify-start">
-            <Link href="/" className="text-xl font-bold tracking-tight text-blue-500">
-              PulsePass
+          <div className="flex-1 flex justify-start items-center">
+            <Link href="/" className="flex items-center gap-2 group">
+              <div className="w-8 h-8 bg-yellow-500 border-2 border-yellow-300 flex items-center justify-center font-bold text-white shadow-[inset_0_-2px_0_rgba(0,0,0,0.3)] transform group-hover:scale-105 transition-transform">
+                P
+              </div>
+              <span className="text-3xl font-bold tracking-widest text-[#5aa4ff] mc-text-shadow mt-1">
+                PULSE<span className="text-white">PASS</span>
+              </span>
             </Link>
           </div>
           
           {/* Center: Links */}
-          <div className="hidden md:flex flex-1 justify-center items-center gap-8">
-            <Link href="/#why-us" className="text-sm font-medium text-gray-400 hover:text-white hover:underline hover:underline-offset-4 transition-colors">Why Us</Link>
-            <Link href="/#pricing" className="text-sm font-medium text-gray-400 hover:text-white hover:underline hover:underline-offset-4 transition-colors">Pricing</Link>
-            <Link href="/#faq" className="text-sm font-medium text-gray-400 hover:text-white hover:underline hover:underline-offset-4 transition-colors">FAQ</Link>
+          <div className="hidden md:flex flex-2 justify-center items-center gap-8">
+            <Link href="/#products" className="text-2xl text-gray-300 hover:text-white transition-colors mc-text-shadow">PRODUCTS</Link>
+            <Link href="/#solutions" className="text-2xl text-gray-300 hover:text-white transition-colors mc-text-shadow">SOLUTIONS</Link>
+            <Link href="/#pricing" className="text-2xl text-gray-300 hover:text-white transition-colors mc-text-shadow">PLANS</Link>
+            <Link href="/#support" className="text-2xl text-gray-300 hover:text-white transition-colors mc-text-shadow">SUPPORT</Link>
           </div>
 
-          {/* Right: Auth */}
+          {/* Right: Auth / Community */}
           <div className="flex-1 flex justify-end gap-4 items-center">
-            <Link href="/" className="text-sm font-medium text-gray-400 hover:text-white hover:underline hover:underline-offset-4 transition-colors mr-2">Home</Link>
             {session ? (
               <>
-                <Link href="/dashboard" className="text-sm font-medium bg-gray-800 hover:bg-gray-700 text-white py-2 px-4 rounded-lg border border-gray-700 cursor-pointer">Dashboard</Link>
-                <div className="text-sm font-medium text-gray-400 hover:text-white cursor-pointer px-2">
+                <Link href="/dashboard" className="text-2xl text-gray-300 hover:text-white mc-text-shadow transition-colors mr-4">DASHBOARD</Link>
+                <div className="cursor-pointer">
                   <LogoutButton />
                 </div>
               </>
             ) : (
-              <Link href="/login" className="inline-flex items-center text-sm font-medium bg-gray-800 hover:bg-gray-700 text-white py-2 px-4 rounded-lg border border-gray-700 transition-colors cursor-pointer">
-                <svg className="w-4 h-4 mr-1.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" /></svg>
-                Log in
+              <Link href="/login" className="mc-btn-blue text-2xl">
+                COMMUNITY ⏵
               </Link>
             )}
           </div>
