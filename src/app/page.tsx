@@ -5,39 +5,16 @@ export default function Home() {
   return (
     <div className="flex flex-col min-h-screen bg-[#1a1a1a] text-white overflow-x-hidden">
       
-      {/* Hero Section */}
-      <section className="relative w-full h-[70vh] flex flex-col items-center justify-center">
-        {/* Background Image */}
+      {/* Hero Section with True 3D Frame Background */}
+      <section className="relative w-full min-h-[90vh] flex flex-col items-center pt-16 pb-16">
+        {/* Background Image (Contains 3D Pillars and Grass Blocks) */}
         <div 
-          className="absolute inset-0 z-0 bg-cover bg-center bg-no-repeat"
-          style={{ backgroundImage: "url('/images/bg_landscape.jpg')" }}
+          className="absolute inset-0 z-0 bg-cover bg-bottom bg-no-repeat"
+          style={{ backgroundImage: "url('/images/bg_3d_frame.jpg')" }}
         ></div>
 
-        {/* Framing Layer */}
-        <div className="absolute inset-0 z-10 pointer-events-none flex justify-between">
-          {/* Left Frame */}
-          <div className="w-[15%] h-full flex flex-col justify-end">
-            <div className="w-full flex-grow bg-mc-stone relative">
-              <div className="absolute bottom-0 w-[120%] h-8 bg-[#9b9b9b] border-4 border-[#5c5c5c] -ml-[10%] shadow-lg"></div>
-            </div>
-            <div className="w-full h-1/3 bg-mc-dirt relative shadow-[inset_-10px_0_20px_rgba(0,0,0,0.5)]">
-              <div className="absolute top-0 w-full h-8 bg-mc-grass-top"></div>
-            </div>
-          </div>
-          
-          {/* Right Frame */}
-          <div className="w-[15%] h-full flex flex-col justify-end">
-            <div className="w-full flex-grow bg-mc-stone relative">
-              <div className="absolute bottom-0 w-[120%] h-8 bg-[#9b9b9b] border-4 border-[#5c5c5c] -ml-[10%] shadow-lg"></div>
-            </div>
-            <div className="w-full h-1/3 bg-mc-dirt relative shadow-[inset_10px_0_20px_rgba(0,0,0,0.5)]">
-              <div className="absolute top-0 w-full h-8 bg-mc-grass-top"></div>
-            </div>
-          </div>
-        </div>
-
         {/* Central Glass Panel */}
-        <div className="relative z-20 w-[60%] flex flex-col items-center">
+        <div className="relative z-20 w-[60%] flex flex-col items-center mt-8">
           <div className="mc-glass-panel py-12 px-10 text-center w-full flex flex-col items-center gap-6">
             <h1 className="text-5xl md:text-7xl mc-title-shadow leading-tight uppercase tracking-wide">
               <span className="text-white">UNLEASH YOUR </span> <br /> 
@@ -51,15 +28,15 @@ export default function Home() {
             </Link>
           </div>
         </div>
-      </section>
+        
+        {/* Spacer to push cards down */}
+        <div className="flex-grow"></div>
 
-      {/* Foreground Grass Strip with Cards */}
-      <section id="products" className="relative z-30 -mt-24 pb-12 bg-mc-dirt min-h-[350px] border-t-8 border-[#302015] shadow-[0_-20px_50px_rgba(0,0,0,0.8)]">
-        <div className="absolute top-0 w-full h-8 bg-mc-grass-top"></div>
-        <div className="relative pt-16 max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 px-8">
+        {/* Foreground Cards Sitting on the 3D Grass */}
+        <div className="relative z-30 max-w-7xl w-full mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 px-16 mt-16">
             
           {/* Card 1 */}
-          <div className="mc-card p-4 flex flex-col items-center text-center cursor-pointer hover:bg-[#2a2a2a]">
+          <div className="mc-card bg-[#151515] p-4 flex flex-col items-center text-center cursor-pointer hover:bg-[#2a2a2a] transform hover:scale-105 transition-transform shadow-[0_10px_20px_rgba(0,0,0,0.8)]">
             <div className="w-48 h-48 relative mb-4">
               <Image src="/images/icon_battlepass.jpg" alt="Battlepass Cores" fill className="object-contain" />
             </div>
@@ -68,7 +45,7 @@ export default function Home() {
           </div>
 
           {/* Card 2 */}
-          <div className="mc-card p-4 flex flex-col items-center text-center cursor-pointer hover:bg-[#2a2a2a]">
+          <div className="mc-card bg-[#151515] p-4 flex flex-col items-center text-center cursor-pointer hover:bg-[#2a2a2a] transform hover:scale-105 transition-transform shadow-[0_10px_20px_rgba(0,0,0,0.8)]">
             <div className="w-48 h-48 relative mb-4">
               <Image src="/images/icon_systems.jpg" alt="Custom Systems" fill className="object-contain" />
             </div>
@@ -77,7 +54,7 @@ export default function Home() {
           </div>
 
           {/* Card 3 */}
-          <div className="mc-card p-4 flex flex-col items-center text-center cursor-pointer hover:bg-[#2a2a2a]">
+          <div className="mc-card bg-[#151515] p-4 flex flex-col items-center text-center cursor-pointer hover:bg-[#2a2a2a] transform hover:scale-105 transition-transform shadow-[0_10px_20px_rgba(0,0,0,0.8)]">
             <div className="w-48 h-48 relative mb-4">
               <Image src="/images/icon_assets.jpg" alt="3D Assets" fill className="object-contain" />
             </div>
@@ -86,7 +63,7 @@ export default function Home() {
           </div>
 
           {/* Card 4 */}
-          <div className="mc-card p-4 flex flex-col items-center text-center cursor-pointer hover:bg-[#2a2a2a]">
+          <div className="mc-card bg-[#151515] p-4 flex flex-col items-center text-center cursor-pointer hover:bg-[#2a2a2a] transform hover:scale-105 transition-transform shadow-[0_10px_20px_rgba(0,0,0,0.8)]">
             <div className="w-48 h-48 relative mb-4">
               <Image src="/images/icon_setups.jpg" alt="Server Setups" fill className="object-contain" />
             </div>
@@ -98,7 +75,7 @@ export default function Home() {
       </section>
 
       {/* Customer Logos Section */}
-      <section className="bg-[#181818] border-t-8 border-[#111] py-8 z-40 relative">
+      <section className="bg-[#181818] border-t-8 border-[#111] py-8 z-40 relative mt-[-4px]">
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-center gap-12 px-6">
           <span className="text-gray-400 mc-text-shadow text-2xl font-bold">CUSTOMER SERVERS</span>
           <div className="flex flex-wrap justify-center gap-12 items-center">
