@@ -1,12 +1,12 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { VT323 } from "next/font/google";
 import { getServerSession } from "next-auth";
 import Link from "next/link";
 import LogoutButton from "@/components/LogoutButton";
 import Chatbot from "@/components/Chatbot";
 import "./globals.css";
 
-const inter = Inter({ subsets: ["latin"] });
+const vt323 = VT323({ weight: "400", subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "PulsePass | The Modern Battle Pass for Minecraft Servers",
@@ -24,7 +24,7 @@ export default async function RootLayout({
 
   return (
     <html lang="en">
-      <body className={`${inter.className} bg-gray-950 text-gray-100 antialiased min-h-screen flex flex-col`}>
+      <body className={`${vt323.className} text-xl bg-[#5d5d5d] text-white antialiased min-h-screen flex flex-col`} style={{ imageRendering: "pixelated" }}>
         <nav className="bg-gray-900 border-b border-gray-800 py-4 px-8 flex items-center justify-between sticky top-0 z-50">
           
           {/* Left: Logo */}

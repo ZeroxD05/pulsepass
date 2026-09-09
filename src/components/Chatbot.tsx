@@ -50,40 +50,39 @@ export default function Chatbot() {
     <>
       {/* Chat Window */}
       {isOpen && (
-        <div className="fixed bottom-24 right-6 w-80 bg-[#161b22] border border-gray-800 rounded-2xl shadow-2xl shadow-black/50 flex flex-col overflow-hidden z-50 animate-in slide-in-from-bottom-5 fade-in duration-200">
-          <div className="bg-[#0d1117] px-4 py-3 border-b border-gray-800 flex justify-between items-center">
-            <div className="flex items-center gap-2">
-              <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
-              <span className="font-bold text-white text-sm">PulsePass Support</span>
-            </div>
+        <div className="fixed bottom-24 right-6 w-80 mc-panel flex flex-col overflow-hidden z-50 shadow-2xl">
+          <div className="bg-[#3f3f3f] px-4 py-2 border-b-4 border-[#1e1e1e] flex justify-between items-center">
+            <span className="text-white text-2xl mc-text-shadow">Server Chat</span>
             <button 
               onClick={() => setIsOpen(false)}
-              className="text-gray-400 hover:text-white transition-colors"
+              className="text-[#c6c6c6] hover:text-white mc-text-shadow font-bold text-2xl cursor-pointer"
             >
-              <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" /></svg>
+              X
             </button>
           </div>
           
-          <div className="flex-grow p-4 h-80 overflow-y-auto flex flex-col gap-4 bg-[#0d1117]">
+          <div className="flex-grow p-4 h-80 overflow-y-auto flex flex-col gap-2 bg-[#1e1e1e] font-mono text-lg">
             {messages.map((msg) => (
-              <div key={msg.id} className={`flex ${msg.sender === "user" ? "justify-end" : "justify-start"}`}>
-                <div className={`max-w-[85%] p-3 rounded-2xl text-sm ${msg.sender === "user" ? "bg-blue-600 text-white rounded-br-sm" : "bg-[#161b22] text-gray-300 border border-gray-800 rounded-bl-sm"}`}>
-                  {msg.text}
-                </div>
+              <div key={msg.id} className="text-[#c6c6c6] leading-snug">
+                {msg.sender === "user" ? (
+                  <span><span className="text-white">&lt;You&gt;</span> {msg.text}</span>
+                ) : (
+                  <span><span className="text-[#55ffff]">[Server]</span> <span className="text-[#55aa55]">PulsePass</span>: <span className="text-white">{msg.text}</span></span>
+                )}
               </div>
             ))}
             
             {/* Clickable Questions */}
             {availableQuestions.length > 0 && (
-              <div className="flex flex-col gap-2 mt-2">
-                <span className="text-xs text-gray-500 mb-1 ml-1">Click a question:</span>
+              <div className="flex flex-col gap-2 mt-4 pt-4 border-t-2 border-[#3f3f3f]/50">
+                <span className="text-[#a0a0a0] mb-1">Select option:</span>
                 {availableQuestions.map(q => (
                   <button 
                     key={q}
                     onClick={() => handleQuestionClick(q)}
-                    className="text-left text-xs bg-[#161b22] border border-gray-800 hover:border-blue-500/50 hover:bg-[#161b22]/80 text-blue-400 p-2.5 rounded-lg transition-colors"
+                    className="text-left text-[#55ffff] hover:text-white hover:underline decoration-2 underline-offset-2 transition-colors cursor-pointer"
                   >
-                    {q}
+                    &gt; {q}
                   </button>
                 ))}
               </div>
@@ -96,16 +95,9 @@ export default function Chatbot() {
       {/* Floating Button */}
       <button 
         onClick={() => setIsOpen(!isOpen)}
-        className="fixed bottom-6 right-6 w-14 h-14 bg-blue-600 hover:bg-blue-700 text-white rounded-full shadow-lg shadow-blue-600/30 flex items-center justify-center transition-transform hover:scale-105 z-50 group"
+        className="fixed bottom-6 right-6 w-16 h-16 mc-button p-0 flex items-center justify-center z-50 text-3xl pb-2 shadow-2xl"
       >
-        {!isOpen ? (
-          <>
-            <div className="absolute top-0 right-0 w-3.5 h-3.5 bg-red-500 border-2 border-gray-950 rounded-full"></div>
-            <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z" /></svg>
-          </>
-        ) : (
-          <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" /></svg>
-        )}
+        {!isOpen ? "💬" : "X"}
       </button>
     </>
   );

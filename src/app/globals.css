@@ -1,1 +1,57 @@
 @import "tailwindcss";
+
+@theme {
+  --color-mc-stone: #5d5d5d;
+  --color-mc-dirt: #866043;
+  --color-mc-grass-top: #55aa55;
+  --color-mc-grass-side: #648c4d;
+  --color-mc-button: #c6c6c6;
+  --color-mc-button-hover: #99aab5;
+}
+
+body {
+  image-rendering: pixelated;
+  font-smooth: never;
+  -webkit-font-smoothing: none;
+}
+
+/* Minecraft Button Style */
+.mc-button {
+  background-color: var(--color-mc-button);
+  color: #3f3f3f;
+  border: 4px solid;
+  border-top-color: #ffffff;
+  border-left-color: #ffffff;
+  border-right-color: #555555;
+  border-bottom-color: #555555;
+  padding: 12px 24px;
+  font-weight: bold;
+  text-transform: uppercase;
+  transition: none;
+  cursor: pointer;
+  text-align: center;
+}
+
+.mc-button:active, .mc-button:hover {
+  background-color: #a0a0a0;
+  border-top-color: #555555;
+  border-left-color: #555555;
+  border-right-color: #ffffff;
+  border-bottom-color: #ffffff;
+}
+
+.mc-panel {
+  background-color: #c6c6c6;
+  color: #3f3f3f;
+  border: 4px solid #ffffff;
+  border-right-color: #555555;
+  border-bottom-color: #555555;
+}
+
+.mc-text-shadow {
+  text-shadow: 2px 2px 0 #3f3f3f;
+}
+
+.mc-title-shadow {
+  text-shadow: 4px 4px 0 #3f3f3f;
+}
