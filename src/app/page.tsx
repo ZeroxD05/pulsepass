@@ -35,8 +35,7 @@ export default function Home() {
         {/* Foreground Cards Sitting on the 3D Grass */}
         <div className="relative z-30 max-w-7xl w-full mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 px-16 mt-16">
             
-          {/* Card 1 */}
-          <div className="mc-card bg-[#151515] p-4 flex flex-col items-center text-center cursor-pointer hover:bg-[#2a2a2a] transform hover:scale-105 transition-transform shadow-[0_10px_20px_rgba(0,0,0,0.8)]">
+          <div className="flex flex-col items-center text-center cursor-pointer transform hover:scale-110 transition-transform">
             <div className="w-48 h-48 relative mb-4">
               <Image src="/images/icon_battlepass.jpg" alt="Battlepass Cores" fill className="object-contain" />
             </div>
@@ -44,8 +43,7 @@ export default function Home() {
             <p className="text-gray-400 text-sm">Create Engaging Pass Systems</p>
           </div>
 
-          {/* Card 2 */}
-          <div className="mc-card bg-[#151515] p-4 flex flex-col items-center text-center cursor-pointer hover:bg-[#2a2a2a] transform hover:scale-105 transition-transform shadow-[0_10px_20px_rgba(0,0,0,0.8)]">
+          <div className="flex flex-col items-center text-center cursor-pointer transform hover:scale-110 transition-transform">
             <div className="w-48 h-48 relative mb-4">
               <Image src="/images/icon_systems.jpg" alt="Custom Systems" fill className="object-contain" />
             </div>
@@ -53,8 +51,7 @@ export default function Home() {
             <p className="text-gray-400 text-sm">3D-modelled Pickaxe</p>
           </div>
 
-          {/* Card 3 */}
-          <div className="mc-card bg-[#151515] p-4 flex flex-col items-center text-center cursor-pointer hover:bg-[#2a2a2a] transform hover:scale-105 transition-transform shadow-[0_10px_20px_rgba(0,0,0,0.8)]">
+          <div className="flex flex-col items-center text-center cursor-pointer transform hover:scale-110 transition-transform">
             <div className="w-48 h-48 relative mb-4">
               <Image src="/images/icon_assets.jpg" alt="3D Assets" fill className="object-contain" />
             </div>
@@ -62,8 +59,7 @@ export default function Home() {
             <p className="text-gray-400 text-sm">3D Cosmetic models</p>
           </div>
 
-          {/* Card 4 */}
-          <div className="mc-card bg-[#151515] p-4 flex flex-col items-center text-center cursor-pointer hover:bg-[#2a2a2a] transform hover:scale-105 transition-transform shadow-[0_10px_20px_rgba(0,0,0,0.8)]">
+          <div className="flex flex-col items-center text-center cursor-pointer transform hover:scale-110 transition-transform">
             <div className="w-48 h-48 relative mb-4">
               <Image src="/images/icon_setups.jpg" alt="Server Setups" fill className="object-contain" />
             </div>
