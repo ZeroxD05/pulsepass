@@ -39,7 +39,7 @@ export default function Home() {
             </p>
             <Link href="#products" className="mc-btn-blue text-3xl mt-8 px-12 py-5 shadow-[0_0_30px_rgba(0,92,230,0.8)] group flex items-center gap-4">
               EXPLORE PRODUCTS
-              <span className="text-[#5aa4ff] text-2xl group-hover:translate-x-2 transition-transform">-></span>
+              <span className="text-[#5aa4ff] text-2xl group-hover:translate-x-2 transition-transform">-{">"}</span>
             </Link>
           </div>
         </div>
@@ -113,7 +113,7 @@ export default function Home() {
             <Link href="#" className="text-white hover:text-yellow-400 mc-text-shadow">LINK ^</Link>
             <Link href="#" className="text-white hover:text-yellow-400 mc-text-shadow">PLANS</Link>
             <Link href="#" className="text-white hover:text-yellow-400 mc-text-shadow flex items-center gap-2">
-              SIGN <span className="text-[#5aa4ff] text-xl">-></span>
+              SIGN <span className="text-[#5aa4ff] text-xl">-{">"}</span>
             </Link>
           </div>
           
