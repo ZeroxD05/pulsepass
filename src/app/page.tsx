@@ -5,12 +5,12 @@ export default function Home() {
   return (
     <div className="flex flex-col min-h-screen bg-[#1a1a1a] text-white overflow-x-hidden">
       
-      {/* Hero Section with True 3D Frame Background */}
-      <section className="relative w-full min-h-[90vh] flex flex-col items-center pt-16 pb-16">
-        {/* Background Image (Contains 3D Pillars and Grass Blocks) */}
+      {/* Hero Section with True Full 3D Frame Background */}
+      <section className="relative w-full min-h-[90vh] flex flex-col items-center pt-32 pb-16">
+        {/* Background Image (Contains 3D Wood Top, Stone Sides, Grass Bottom) */}
         <div 
-          className="absolute inset-0 z-0 bg-cover bg-bottom bg-no-repeat"
-          style={{ backgroundImage: "url('/images/bg_3d_frame.jpg')" }}
+          className="absolute inset-0 z-0 bg-cover bg-center bg-no-repeat"
+          style={{ backgroundImage: "url('/images/bg_full_frame.jpg')" }}
         ></div>
 
         {/* Central Glass Panel */}
@@ -35,33 +35,37 @@ export default function Home() {
         {/* Foreground Cards Sitting on the 3D Grass */}
         <div className="relative z-30 max-w-7xl w-full mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 px-16 mt-16">
             
-          <div className="flex flex-col items-center text-center cursor-pointer transform hover:scale-110 transition-transform">
-            <div className="w-48 h-48 relative mb-4">
-              <Image src="/images/icon_battlepass.jpg" alt="Battlepass Cores" fill className="object-contain" />
+          {/* Card 1 */}
+          <div className="mc-card bg-[#111] p-4 flex flex-col items-center text-center cursor-pointer hover:bg-[#222] transform hover:scale-105 transition-transform shadow-[0_10px_20px_rgba(0,0,0,0.8)]">
+            <div className="w-40 h-40 relative mb-4">
+              <Image src="/images/icon_battlepass.jpg" alt="Battlepass Cores" fill className="object-contain" style={{ mixBlendMode: 'screen', filter: 'contrast(1.2)' }} />
             </div>
             <h3 className="text-2xl font-bold text-white uppercase mc-text-shadow mb-1">BATTLEPASS CORES</h3>
             <p className="text-gray-400 text-sm">Create Engaging Pass Systems</p>
           </div>
 
-          <div className="flex flex-col items-center text-center cursor-pointer transform hover:scale-110 transition-transform">
-            <div className="w-48 h-48 relative mb-4">
-              <Image src="/images/icon_systems.jpg" alt="Custom Systems" fill className="object-contain" />
+          {/* Card 2 */}
+          <div className="mc-card bg-[#111] p-4 flex flex-col items-center text-center cursor-pointer hover:bg-[#222] transform hover:scale-105 transition-transform shadow-[0_10px_20px_rgba(0,0,0,0.8)]">
+            <div className="w-40 h-40 relative mb-4">
+              <Image src="/images/icon_systems.jpg" alt="Custom Systems" fill className="object-contain" style={{ mixBlendMode: 'screen', filter: 'contrast(1.2)' }} />
             </div>
             <h3 className="text-2xl font-bold text-white uppercase mc-text-shadow mb-1">CUSTOM SYSTEMS</h3>
             <p className="text-gray-400 text-sm">3D-modelled Pickaxe</p>
           </div>
 
-          <div className="flex flex-col items-center text-center cursor-pointer transform hover:scale-110 transition-transform">
-            <div className="w-48 h-48 relative mb-4">
-              <Image src="/images/icon_assets.jpg" alt="3D Assets" fill className="object-contain" />
+          {/* Card 3 */}
+          <div className="mc-card bg-[#111] p-4 flex flex-col items-center text-center cursor-pointer hover:bg-[#222] transform hover:scale-105 transition-transform shadow-[0_10px_20px_rgba(0,0,0,0.8)]">
+            <div className="w-40 h-40 relative mb-4">
+              <Image src="/images/icon_assets.jpg" alt="3D Assets" fill className="object-contain" style={{ mixBlendMode: 'screen', filter: 'contrast(1.2)' }} />
             </div>
             <h3 className="text-2xl font-bold text-white uppercase mc-text-shadow mb-1">3D ASSETS</h3>
             <p className="text-gray-400 text-sm">3D Cosmetic models</p>
           </div>
 
-          <div className="flex flex-col items-center text-center cursor-pointer transform hover:scale-110 transition-transform">
-            <div className="w-48 h-48 relative mb-4">
-              <Image src="/images/icon_setups.jpg" alt="Server Setups" fill className="object-contain" />
+          {/* Card 4 */}
+          <div className="mc-card bg-[#111] p-4 flex flex-col items-center text-center cursor-pointer hover:bg-[#222] transform hover:scale-105 transition-transform shadow-[0_10px_20px_rgba(0,0,0,0.8)]">
+            <div className="w-40 h-40 relative mb-4">
+              <Image src="/images/icon_setups.jpg" alt="Server Setups" fill className="object-contain" style={{ mixBlendMode: 'screen', filter: 'contrast(1.2)' }} />
             </div>
             <h3 className="text-2xl font-bold text-white uppercase mc-text-shadow mb-1">SERVER SETUPS</h3>
             <p className="text-gray-400 text-sm">Plug & Play Solutions</p>

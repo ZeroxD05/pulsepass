@@ -25,7 +25,7 @@ export default async function RootLayout({
   return (
     <html lang="en">
       <body className={`${vt323.className} text-xl bg-[#5d5d5d] text-white antialiased min-h-screen flex flex-col`} style={{ imageRendering: "pixelated" }}>
-        <nav className="bg-mc-wood py-3 px-8 flex items-center justify-between sticky top-0 z-50">
+        <nav className="absolute top-0 left-0 w-full bg-transparent py-4 px-8 flex items-center justify-between z-50">
           
           {/* Left: Logo */}
           <div className="flex-1 flex justify-start items-center">
